@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+{% block content %}
+  <h2>Routes</h2>
+  <a href="{% url 'route_create' %}">Add New Route</a>
+  <ul>
+    {% for route in routes %}
+      <li>{{ route.route_short_name }} - {{ route.route_long_name }} 
+        <a href="{% url 'route_update' route.route_id %}">Edit</a> 
+        <a href="{% url 'route_delete' route.route_id %}">Delete</a>
+      </li>
+    {% endfor %}
+  </ul>
+{% endblock %}
