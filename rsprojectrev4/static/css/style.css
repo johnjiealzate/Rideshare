@@ -1,0 +1,377 @@
+.navbar {
+    height: 70px; /* Set the height you want */
+    display: flex;
+    align-items: center; /* Vertically center the content */
+    justify-content: space-between; /* Space out the items */
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.navbar-brand {
+   margin-left: 25px;
+}
+
+.navbar-nav {
+   margin-right: 25px;
+}
+
+.navbar-toggler {
+    vertical-align: middle;
+}
+
+.navbar .btn-primary .btn-secondary {
+   margin-right: 100px; /* Adjust space between buttons */
+ }
+ 
+ .navbar .btn:last-child {
+   margin-right: 0; /* Remove margin from the last button */
+ }
+
+#hero {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    transition: margin-top 0.3s ease; /* Smooth transition */
+    padding-left: 25px;          /* Optional: Add some space from the left edge */
+}
+
+#hero.menu-open {
+   margin-top: 170px; /* Adjust this value based on your navbar height */
+}
+
+ #hero::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('/static/images/travel.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    filter: brightness(60%);
+ }
+ #hero-content {
+    position: relative;
+    font-family: "Monserrat", sans-serif;
+    color: white;
+    text-align: left;
+    margin: 0.625rem;
+    align-items: center;
+ }
+ .hero-title {
+    font-size: 5.5rem;
+    font-weight: 600;
+    margin-bottom: 0;
+    justify-items: start;
+ }
+ .hero-subtitle {
+    font-size: 2rem;
+    font-weight: 200;
+    margin-top: 0.5rem;
+ }
+ .navbar-brand {
+    font-size: x-large;
+ }
+ .route_list {
+    border-radius: 20px;
+    border: none;
+    padding: 20px;
+    font-family: "Monserrat", sans-serif;
+    display: inline-block;
+    margin-top: 25px;
+    font-size: 1.75rem;
+    width: auto;
+    color: white;
+    background-color: #1B4159;
+ }
+
+ .route_list:hover {
+   background-color: #0e323f;  /* Optional: Change background color on hover */
+}
+
+/* Make the button more responsive */
+@media (max-width: 1200px) {
+   .route_list {
+       font-size: 1.6rem;          /* Slightly larger font on larger tablets */
+       padding: 25px 25px;
+   }
+}
+
+@media (max-width: 992px) {
+   .route_list {
+       font-size: 1.5rem;          /* Adjust font size for medium screens */
+       padding: 20px 20px;
+   }
+}
+
+@media (max-width: 768px) {
+   .route_list {
+       font-size: 1.4rem;             /* Slightly smaller font for small screens */
+       padding: 15px 15px;          /* Reduce padding */
+       width: 80%;                  /* Make button width 80% of the screen */
+       max-width: 400px;            /* Set max-width so it doesn’t get too large */
+   }
+}
+
+@media (max-width: 576px) {
+   .route_list {
+       font-size: 1.3rem;          /* Smaller font for very small screens */
+       padding: 15px 15px;          /* Even smaller padding */
+       width: 90%;                  /* Make button width 90% of the screen */
+       max-width: 350px;            /* Limit the max-width on small screens */
+   }
+}
+ 
+ h2 {
+    font-size: xx-large;
+ }
+
+ #list {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: margin-top 0.3s ease; /* Smooth transition */
+ }
+
+#list.menu-open {
+   margin-top: 170px; /* Adjust this value based on your navbar height */
+}
+
+ #list::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('/static/images/travel.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    filter: brightness(60%);
+ }
+ #hero-content_list {
+    position: relative;
+    font-family: "Monserrat", sans-serif;
+    color: white;
+    text-align: center;
+    margin: 0.625rem;
+    align-items: center;
+ }
+ .hero-title_list {
+    font-size: 3rem;
+    font-weight: 600;
+    margin-bottom: 0;
+    justify-items: start;
+ }
+
+ #addform {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: margin-top 0.3s ease; /* Smooth transition */
+ }
+
+ #addform.menu-open {
+   margin-top: 170px; /* Adjust this value based on your navbar height */
+}
+
+ #addform::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('/static/images/travel.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    filter: brightness(60%);
+ }
+ #hero-content_addform {
+    position: relative;
+    font-family: "Monserrat", sans-serif;
+    color: white;
+    text-align: center;
+    margin: 0.625rem;
+    align-items: center;
+ }
+ .hero-title_addform {
+    font-size: 3rem;
+    font-weight: 600;
+    margin-bottom: 0;
+    justify-items: start;
+ }
+ .add_new_route {
+    border-radius: 10px;
+    border: none;
+    padding: 10px;
+    font-family: "Monserrat", sans-serif;
+    display: inline-block;
+    margin-top: 0.3rem;
+    font-size: 1rem;
+    width: 100%;
+    color: white;
+    background-color: #1B4159;
+ }
+/* Footer Section */
+.footer {
+   background-color: #333;
+   color: white;
+   padding: 40px 0;
+   bottom: 0;
+   left: 0;
+   width: 100%;
+   color: white;
+   z-index: 9999;  /* Ensures it's above other content */
+}
+
+.footer-top {
+   display: flex;
+   flex-wrap: wrap;
+   justify-content: space-between;
+   gap: 20px;
+}
+
+.footer-item {
+   margin-bottom: 20px;
+   flex: 1;
+}
+
+/* Legal Information (first 6 columns) */
+.footer-item .copyright p a {
+   margin: 0;
+   padding-bottom: 10px;
+   text-decoration: none;
+   color: white;
+}
+
+.privacy_policy {
+   text-decoration: none;
+   color: white;
+}
+
+.privacy_policy:hover {
+   color: #00bcd4;
+}
+
+.terms_of_use {
+   text-decoration: none;
+   color: white;
+}
+
+.terms_of_use:hover {
+   color: #00bcd4;
+}
+
+.use_of_cookies {
+   text-decoration: none;
+   color: white;
+}
+
+.use_of_cookies:hover {
+   color: #00bcd4;
+}
+
+.footer-item .legal-links ul {
+   list-style: none;
+   padding: 0;
+   margin: 0;
+}
+
+.footer-item .legal-links ul li {
+   margin-bottom: 5px;
+}
+
+.footer-item .legal-links ul li a {
+   color: white;
+   text-decoration: none;
+}
+
+.footer-item .legal-links ul li a:hover {
+   color: #00bcd4;
+}
+
+/* Contact Info (next 3 columns) */
+.footer-item.contact-info h4 {
+   margin-bottom: 10px;
+}
+
+.footer-item.contact-info p {
+   margin: 0;
+   font-size: 1rem;
+}
+
+.footer-item.contact-info a {
+   color: white;
+   text-decoration: none;
+}
+
+.footer-item.contact-info a:hover {
+   color: #00bcd4;
+}
+
+/* Social Media (last 3 columns) */
+.footer-item.social-media ul {
+   list-style: none;
+   padding: 0;
+   margin: 0;
+}
+
+.footer-item.social-media ul li {
+   margin-bottom: 10px;
+}
+
+.footer-item.social-media ul li a {
+   color: white;
+   text-decoration: none;
+   font-size: 1.25rem;
+}
+
+.footer-item.social-media ul li a:hover {
+   color: #00bcd4;
+}
+
+/* Flexbox Layout for Responsive Design */
+@media (max-width: 768px) {
+   .footer-top {
+       flex-direction: column;
+       align-items: flex-start;
+   }
+   
+   .footer-item {
+       width: 100%; /* Make each section full width on small screens */
+   }
+
+   .footer-item .legal-links ul li {
+       margin-right: 20px; /* Add space between links */
+   }
+}
+
+/* Responsive Layout for Footer Links */
+@media (max-width: 576px) {
+   .footer-item .legal-links ul li {
+       margin-bottom: 15px; /* More space between legal links */
+   }
+   
+   .footer-item.social-media ul {
+       display: flex;
+       justify-content: space-between;
+   }
+   
+   .footer-item.social-media ul li {
+       margin-right: 15px;
+   }
+}

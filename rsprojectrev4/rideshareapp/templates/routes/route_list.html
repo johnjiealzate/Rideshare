@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+{% block content %}
+  <section id="list">
+    <div class="container" id="hero-content_list">         
+      <h3 class="hero-title_list">Routes</h3> 
+      <ul>
+        {% for route in routes %}
+          <ul>{{ route.route_short_name }} - {{ route.route_long_name }} 
+            <a href="{% url 'route_update' route.route_id %}">Edit</a> 
+            <a href="{% url 'route_delete' route.route_id %}">Delete</a>
+          </ul>
+        {% endfor %}
+      </ul>
+      <a href="{% url 'route_create' %}">Add New Route</a>
+    </div>
+  </section>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+      $(document).ready(function(){
+        $('.navbar-toggler').click(function(){
+          $('#list').toggleClass('menu-open');
+        });
+      });
+      
+    </script>  
+{% endblock %}
