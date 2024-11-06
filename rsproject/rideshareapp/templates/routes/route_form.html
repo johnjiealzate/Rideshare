@@ -1,9 +1,18 @@
 {% extends 'base.html' %}
 {% block content %} 
-  <h2>{{ form.instance.pk|yesno:"Edit Route,New Route" }}</h2> 
-  <form method="post"> 
-    {% csrf_token %} 
-    {{ form.as_p }} 
-    <button type="submit">Save</button> 
-  </form> 
+  <section id="addform">
+    <div class="container" id="hero-content_addform">         
+      <h4 class="hero-title_addform">{{ form.instance.pk|yesno:"Edit Route,New Route" }}</h4> 
+      <form method="post"> 
+        {% csrf_token %} 
+        {{ form.as_p }}
+        <div class="row">
+          <div class="col-4"></div>
+          <div class="col-4"><button type="submit" class="add_new_route">Add new route</button><div>
+          <div class="col-4"></div>
+        <div>
+      </form> 
+  </div> 
+  </section>  
 {% endblock %} 
+
